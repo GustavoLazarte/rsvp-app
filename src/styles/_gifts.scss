@@ -1,0 +1,19 @@
+.gifts {
+  &-intro { font-family: var(--serif); font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; line-height: 1.6; color: var(--ink); max-width: 640px; margin-bottom: 0.75rem; }
+  &-sub { font-family: var(--sans); font-size: 14px; font-weight: 300; line-height: 1.85; color: #5a7565; max-width: 520px; margin-bottom: 3rem; }
+  &-sec-label { font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; display: block; }
+  &-table-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+  &-other { display: grid; grid-template-columns: 1fr; gap: 1.5rem;
+
+    @media (min-width: 768px) { grid-template-columns: 1fr 1fr; }
+  }
+}
+
+.gift {
+  &-card { @extend %card-base;
+    &-name { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--ink); margin-bottom: 1.25rem; }
+  }
+  &-other-card { @extend %card-base; }
+  &-other-title { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.75rem; }
+  &-other-body { font-family: var(--sans); font-size: 13px; font-weight: 300; line-height: 1.75; color: #5a7565; }
+}

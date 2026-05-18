@@ -1,0 +1,135 @@
+.hero {
+  min-height: 100svh; position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  overflow: hidden; background: var(--ink);
+
+  &-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 25% 60%, #1e4230 0%, #1A2E22 50%, #0b1610 100%);
+  }
+
+  &-vline {
+    position: absolute; width: 1px; height: 100%; top: 0;
+    background: linear-gradient(to bottom, transparent, rgba(184,212,190,0.05) 25%, rgba(184,212,190,0.05) 75%, transparent);
+  }
+
+  &-ring {
+    position: absolute; border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rPulse 9s ease-in-out infinite;
+  }
+
+  &-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 2rem 1.5rem;
+    max-width: 920px;
+  }
+
+  &-eyebrow {
+    font-family: var(--sans); font-size: 10px; font-weight: 400;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: rgba(184,212,190,0.5); margin-bottom: 2.5rem;
+    opacity: 0; animation: fadeUp 1s 0.3s forwards;
+  }
+
+  &-names {
+    font-family: var(--serif);
+    font-size: clamp(78px, 20vw, 196px); font-weight: 300;
+    line-height: 0.85; color: var(--white);
+    letter-spacing: -0.025em;
+    opacity: 0; animation: fadeUp 1.4s 0.5s forwards;
+  }
+
+  &-amp {
+    color: var(--gold); display: block;
+    font-size: clamp(50px, 13vw, 128px);
+  }
+
+  &-sub {
+    font-family: var(--serif);
+    font-size: clamp(15px, 2.2vw, 21px); font-weight: 300;
+    line-height: 1.7; color: rgba(255,255,255,0.4);
+    margin-top: 2.5rem; white-space: pre-line;
+    opacity: 0; animation: fadeUp 1s 0.85s forwards;
+  }
+
+  &-meta {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1.5rem; margin-top: 1.75rem;
+    opacity: 0; animation: fadeUp 1s 1.0s forwards;
+
+    &-item {
+      font-family: var(--sans); font-size: 9.5px; font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(184,212,190,0.42);
+    }
+
+    &-sep { width: 1px; height: 12px; background: rgba(184,212,190,0.18); }
+  }
+
+  &-cta {
+    @extend %btn-base;
+    margin-top: 3rem;
+    padding: 0.9rem 2.75rem;
+    border: 1px solid rgba(255,255,255,0.17);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-radius: 100px;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.45s var(--ease);
+    text-decoration: none;
+    opacity: 0; animation: fadeUp 1s 1.2s forwards;
+
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-3px);
+    }
+  }
+
+  &-chevron {
+    position: absolute; bottom: 2rem; left: 50%;
+    transform: translateX(-50%);
+    color: rgba(184,212,190,0.28);
+    animation: chevBounce 2.5s ease-in-out infinite;
+    z-index: 2; cursor: pointer;
+  }
+}
+
+.hvl1 { left: 22%; }
+.hvl2 { right: 22%; }
+.hr1 { width: min(480px, 110vw); height: min(480px, 110vw); border: 1px solid rgba(184,212,190,0.07); }
+.hr2 { width: min(780px, 155vw); height: min(780px, 155vw); border: 1px solid rgba(184,212,190,0.03); animation-delay: 2.5s; }
+
+@keyframes rPulse {
+  0%,100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.015); }
+}
+
+@keyframes chevBounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-toggle {
+  position: absolute; top: calc(34px + 1.25rem); right: 1.5rem; z-index: 200;
+  display: flex; background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px; overflow: hidden;
+
+  .lang-btn {
+    padding: 0.4rem 0.95rem; font-family: var(--sans);
+    font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.38); cursor: pointer;
+    transition: all 0.25s; border: none; background: none;
+
+    &.active { background: rgba(255,255,255,0.13); color: var(--white); }
+  }
+}

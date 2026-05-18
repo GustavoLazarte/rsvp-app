@@ -1,16 +1,3 @@
-// Shared constants extracted from MoniJose.jsx
-export const C = {
-  white: "#fff", ow: "#F7FAF8", mist: "#E8F0EB",
-  sage: "#B8D4BE", forest: "#3A6B4A", deep: "#264D35",
-  ink: "#1A2E22", gold: "#B89B6A",
-};
-
-export const SHEETS_URL = "https://script.google.com/macros/s/AKfycbw-5EcqFw0yzZZ2bZQ4YhTh0o0ECXsi5-X1M_l1k74Y2fd7nm7pKd0KwA1GBse1SSrBLg/exec";
-export const WA_NUMBER = "59169530474";
-export const MAPS_URL = "https://maps.google.com/?q=Huerto+de+los+Olivos+El+Portal+Cochabamba+Bolivia";
-export const GCAL_URL = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+Moni+%26+Jose&dates=20260913T153000Z/20260914T033000Z&details=Ceremonia+16:30+hs+-+Huerto+de+los+Olivos+by+El+Portal,+Cochabamba&location=Huerto+de+los+Olivos,+Cochabamba,+Bolivia";
-export const ICAL_DATA = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:Boda Moni & Jose\nDTSTART:20260913T163000Z\nDTEND:20260914T033000Z\nLOCATION:Huerto de los Olivos by El Portal, Cochabamba, Bolivia\nDESCRIPTION:Ceremonia 16:30 hs\nEND:VEVENT\nEND:VCALENDAR";
-
 export const T = {
   es: {
     ticker: "Moni & Jose · 13 de Septiembre 2026 · Cochabamba, Bolivia · Solo adultos · Huerto de los Olivos by El Portal",
@@ -87,9 +74,6 @@ export const T = {
     rsvp_ok_yes: "No puedes imaginar lo mucho que significa tenerte en este día. ¡Te esperamos con los brazos abiertos!",
     rsvp_ok_no_title: "Gracias por avisarnos.",
     rsvp_ok_no: "Te echaremos de menos. Siempre serás parte de nuestra historia.",
-    rsvp_ok_event: "El evento",
-    rsvp_ok_add_cal: "Agregar al Calendario",
-    rsvp_ok_countdown: "Faltan",
     footer_close: "Gracias por ser parte de nuestra historia.",
     footer_date: "13 · 09 · 2026", footer_loc: "Cochabamba · Bolivia",
   },
@@ -168,33 +152,7 @@ export const T = {
     rsvp_ok_yes: "You cannot imagine how much it means to have you on this day. We can't wait to celebrate with you!",
     rsvp_ok_no_title: "Thank you for letting us know.",
     rsvp_ok_no: "We will miss you. You'll always be part of our story.",
-    rsvp_ok_event: "The event",
-    rsvp_ok_add_cal: "Add to Calendar",
-    rsvp_ok_countdown: "Countdown",
     footer_close: "Thank you for being part of our story.",
     footer_date: "13 · 09 · 2026", footer_loc: "Cochabamba · Bolivia",
   },
-};
-
-export const photoGrads = [
-  `linear-gradient(135deg,#ddf0e4 0%,${C.sage} 100%)`,
-  `linear-gradient(148deg,${C.sage} 0%,${C.forest} 100%)`,
-  `linear-gradient(128deg,#c8e4cf 0%,${C.mist} 100%)`,
-  `linear-gradient(155deg,${C.deep} 0%,#3d7d54 100%)`,
-  `linear-gradient(138deg,#edddb0 0%,${C.gold} 100%)`,
-  `linear-gradient(148deg,${C.mist} 0%,#c5d9ca 100%)`,
-];
-export const swatchColors = ["#F5F0E8", C.sage, "#C4A882", "#6B7B4E", "#D4C4A0", "#F2EDE0"];
-
-export const WMO_DESC = {
-  es: { 0:"Despejado", 1:"Mayormente despejado", 2:"Parcialmente nublado", 3:"Nublado",
-    45:"Niebla", 48:"Niebla con escarcha", 51:"Llovizna ligera", 53:"Llovizna moderada",
-    55:"Llovizna densa", 61:"Lluvia ligera", 63:"Lluvia moderada", 65:"Lluvia intensa",
-    71:"Nieve ligera", 73:"Nieve moderada", 80:"Chubascos ligeros", 81:"Chubascos moderados",
-    82:"Chubascos fuertes", 95:"Tormenta", 96:"Tormenta con granizo", 99:"Tormenta fuerte" },
-  en: { 0:"Clear sky", 1:"Mainly clear", 2:"Partly cloudy", 3:"Overcast",
-    45:"Fog", 48:"Icy fog", 51:"Light drizzle", 53:"Moderate drizzle",
-    55:"Dense drizzle", 61:"Light rain", 63:"Moderate rain", 65:"Heavy rain",
-    71:"Light snow", 73:"Moderate snow", 80:"Light showers", 81:"Moderate showers",
-    82:"Heavy showers", 95:"Thunderstorm", 96:"Hail storm", 99:"Heavy hail storm" },
 };

@@ -1,0 +1,24 @@
+.fab-rsvp {
+  position: fixed; bottom: 1.75rem; right: 1.5rem; z-index: 500;
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.875rem 1.625rem; background: var(--forest);
+  color: var(--white); font-family: var(--sans);
+  font-size: 10.5px; font-weight: 500; letter-spacing: 0.15em;
+  text-transform: uppercase; cursor: pointer; border: none;
+  border-radius: 100px; box-shadow: 0 8px 32px rgba(58,107,74,0.32);
+  transition: all 0.35s; text-decoration: none;
+
+  &:hover { background: var(--deep); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(58,107,74,0.42); }
+}
+
+.fab-music {
+  position: fixed; bottom: 1.75rem; left: 1.5rem; z-index: 500;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(247,250,248,0.92); backdrop-filter: blur(8px);
+  border: 1px solid var(--mist);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(26,46,34,0.1);
+  color: var(--forest); transition: all 0.3s;
+
+  &:hover { border-color: var(--sage); }
+}

@@ -1,0 +1,19 @@
+.btn-f {
+  @extend %btn-base;
+  background: var(--forest);
+  color: var(--white);
+  border: 1px solid var(--forest);
+  text-decoration: none;
+
+  &:hover { background: var(--deep); border-color: var(--deep); }
+  &:disabled { opacity: 0.45; cursor: not-allowed; }
+}
+
+.btn-o {
+  @extend %btn-base;
+  border: 1px solid var(--forest);
+  color: var(--forest);
+  background: none;
+
+  &:hover { background: var(--forest); color: var(--white); }
+}

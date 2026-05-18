@@ -1,0 +1,11 @@
+section {
+  padding: 6rem 1.5rem;
+
+  @media (min-width: 768px) { padding: 8rem 3rem; }
+  @media (min-width: 1200px) { padding: 10rem 5rem; }
+}
+
+.inner { max-width: 1160px; margin: 0 auto; }
+.eyebrow { @extend %eyebrow; }
+.h2 { font-family: var(--serif); font-size: clamp(38px, 6.5vw, 76px); font-weight: 300; line-height: 1.05; color: var(--ink); }
+.rule { width: 36px; height: 1px; background: var(--gold); margin: 2rem 0; }

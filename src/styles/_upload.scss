@@ -1,0 +1,24 @@
+.drop-zone {
+  border: 1px dashed var(--sage);
+  padding: 3rem 1.5rem; text-align: center;
+  cursor: pointer; transition: all 0.3s; background: var(--ow);
+
+  &:hover, &.over { border-color: var(--forest); background: var(--mist); }
+}
+
+.dz-text { font-family: var(--sans); font-size: 14px; font-weight: 300; color: #6a8575; margin: 1rem 0 0.5rem; }
+.dz-or { font-family: var(--sans); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #9ab0a0; margin: 0.75rem 0; }
+
+.up-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem; margin-top: 1.5rem;
+
+  @media (min-width: 500px) { grid-template-columns: repeat(4, 1fr); }
+}
+
+.up-thumb {
+  aspect-ratio: 1; background: var(--mist);
+  padding: 0.5rem 0.5rem 1.75rem;
+  box-shadow: 0 4px 16px rgba(26,46,34,0.08);
+
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}

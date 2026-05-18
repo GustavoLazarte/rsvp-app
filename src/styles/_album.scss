@@ -1,0 +1,57 @@
+.album-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 3rem;
+
+  @media (min-width: 600px) { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+.polaroid {
+  background: var(--white);
+  padding: 0.875rem 0.875rem 2.75rem;
+  box-shadow: 0 6px 32px rgba(26,46,34,0.1);
+  cursor: pointer; transition: all 0.45s var(--ease);
+  position: relative;
+
+  &:nth-child(1) { transform: rotate(-2.2deg); }
+  &:nth-child(2) { transform: rotate(1.7deg); }
+  &:nth-child(3) { transform: rotate(-1.3deg); }
+  &:nth-child(4) { transform: rotate(2.1deg); }
+  &:nth-child(5) { transform: rotate(-1.8deg); }
+  &:nth-child(6) { transform: rotate(1.4deg); }
+
+  &:hover {
+    transform: rotate(0deg) translateY(-10px) scale(1.03);
+    box-shadow: 0 28px 64px rgba(26,46,34,0.18);
+    z-index: 10;
+  }
+}
+
+.pol-inner { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+
+.pol-cap { font-family: var(--sans); font-size: 11px; font-weight: 400; color: #8a9e92; text-align: center; margin-top: 0.625rem; letter-spacing: 0.04em; }
+
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(18,32,22,0.97); z-index: 9000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s; backdrop-filter: blur(12px);
+
+  &.open { opacity: 1; pointer-events: all; }
+}
+
+.lb-close { position: absolute; top: 1.5rem; right: 1.5rem; color: var(--sage); cursor: pointer; padding: 0.5rem; transition: color 0.2s;
+  &:hover { color: var(--white); }
+}
+
+.lb-frame { padding: 0.875rem 0.875rem 3.25rem; background: var(--white); box-shadow: 0 40px 100px rgba(0,0,0,0.4); max-width: 90vw; }
+.lb-img { width: min(540px, 78vw); aspect-ratio: 1; }
+
+.lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  color: rgba(184,212,190,0.55); cursor: pointer;
+  padding: 1.25rem; transition: color 0.2s;
+
+  &:hover { color: var(--white); }
+  &.prev { left: 0.5rem; }
+  &.next { right: 0.5rem; }
+}
